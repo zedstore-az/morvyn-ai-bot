@@ -43,4 +43,6 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, chat))
 
 print("🤖 Morvyn AI Render-də aktivdir...")
-app.run_polling()
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(app.run_polling())
